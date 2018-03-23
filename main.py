@@ -12,12 +12,20 @@ Class dev_window:
     in = Entry(root)
     in.pack
     
-    read = Button(root,text = "Get code", command = self.readcode,in)
+    comment = Text(root)
+    comment.pack
+    
+    read = Button(root,text = "Get code", command = self.readcode(in,comment))
     read.pack
     
-    def readcode(self,in):
+    options = 
+    
+    def readcode(self,in,out):
       text = in.get()
-      print(text)
+      comment = out.get()
+      print("find comment:"+text)
+      print("Write comment:"+ comment)
+      
     
     
 root = Tk("Reddit bot creator")
