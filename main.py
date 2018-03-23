@@ -9,19 +9,19 @@ Class dev_window:
     frame = Frame(root)
     frame.pack
     
-    in = Entry(root)
-    in.pack
+    i = Entry(root)
+    i.pack
     
     comment = Text(root)
     comment.pack
     
-    read = Button(root,text = "Get code", command = self.readcode(in,comment))
+    read = Button(root,text = "Get code", command = self.readcode(i,comment))
     read.pack
     
     options = 
     
-    def readcode(self,in,out):
-      text = in.get()
+    def readcode(self,i,out):
+      text = i.get()
       comment = out.get()
       print("find comment:"+text)
       print("Write comment:"+ comment)
